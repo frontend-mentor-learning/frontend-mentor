@@ -10,7 +10,7 @@ import Background from './backround';
 
 export default function FaqPage() {
     return (
-        <div className={`${work_sans.className} relative w-full h-screen overflow-hidden bg-light-pin ${work_sans.className}`}>
+        <div className={`${work_sans.className} relative w-full h-screen overflow-hidden bg-light-pink ${work_sans.className}`}>
             <Background />
 
             <div className='absolute top-0 z-10 w-full h-screen flex items-center justify-center flex-col'>
