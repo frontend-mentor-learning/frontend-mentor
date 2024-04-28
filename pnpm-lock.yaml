@@ -8,7 +8,7 @@ importers:
 
   .: {}
 
-  packages/newbie:
+  packages/web:
     dependencies:
       next:
         specifier: 14.2.3
