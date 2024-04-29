@@ -30,7 +30,7 @@ const SizeIndicator = () => {
     }, []);
 
     return (
-        <div className={`absolute top-0 right-0 m-4 p-2 bg-gray-200 rounded-lg text-sm font-medium`}>
+        <div className={`absolute top-0 right-0 m-4 p-2 bg-gray-200 rounded-lg text-sm font-medium z-10 `}>
             {size} - {category}
         </div>
     );
