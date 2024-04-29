@@ -1,0 +1,169 @@
+/* Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Young+Serif&display=swap');
+
+/* Box Sizing Reset */
+* {
+  box-sizing: border-box;
+}
+
+/* Root Variables */
+:root {
+  --background-primary: hsl(28, 50%, 90%);
+  --text-primary: hsl(30, 10%, 34%);
+  --text-secondary: hsl(14, 45%, 36%);
+  --text-white: hsl(0, 0%, 100%);
+  --text-accent: hsl(330, 100%, 98%);
+  --eggshell: hsl(30, 54%, 90%);
+  --light-grey: hsl(30, 18%, 87%);
+  --border-light: hsl(30, 18%, 87%);
+  --border-dark: hsl(24, 5%, 18%);
+  --font-primary: 'Outfit', sans-serif;
+}
+
+/* Body Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-primary);
+  font-weight: 400;
+  color: var(--text-primary);
+  background-color: var(--background-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main Container Styles */
+.main-container {
+  background-color: var(--text-white);
+  display: flex;
+  max-width: 50%;
+  flex-direction: column;
+  padding: 2rem;
+  border-radius: 10px;
+  margin: 6rem 0;
+}
+
+/* Omelette Image Styles */
+.omelette-img {
+  background-size: cover;
+  margin-bottom: 0.7rem;
+  border-radius: 10px;
+}
+
+/* Article Heading Styles */
+.article-heading {
+  margin-bottom: 4px;
+  font-family: 'Young Serif';
+  color: var(--border-dark);
+}
+
+/* Prep Section Styles */
+.prep-section {
+  background-color: var(--text-accent);
+  padding: 12px 0 0 12px;
+  border-radius: 10px;
+}
+
+.prep-section p {
+  padding: 0;
+  margin: 0;
+  font-size: medium;
+  font-weight: bold;
+}
+
+.prep-section li {
+  padding-bottom: 10px;
+}
+
+/* Ingredients, Instructions, Nutrition Styles */
+.ingredients p,
+.instructions p,
+.nutrition p {
+  color: var(--text-secondary);
+  font-size: 2rem;
+  font-family: 'Young Serif';
+  margin: 18px 0;
+}
+
+.ingredients ul,
+.instructions ol {
+  padding: 0;
+  padding-left: 25px;
+  margin-top: 0;
+}
+
+.ingredients li,
+.instructions li {
+  padding-bottom: 15px;
+  padding-left: 15px;
+}
+
+/* Horizontal Rule Styles */
+hr {
+  width: 100%;
+  color: var(--border-light);
+  opacity: 0.5;
+}
+
+/* Ordered List Styles */
+ol {
+  counter-reset: item;
+  list-style-type: none;
+}
+
+ol li {
+  counter-increment: item;
+  position: relative;
+}
+
+ol li:before {
+  content: counter(item) '.';
+  position: absolute;
+  left: -1.5em;
+  color: var(--text-secondary);
+  font-weight: bold;
+}
+
+/* Nutrition Table Styles */
+.nutrition-table {
+  margin: 20px 0;
+}
+
+.nutrition-table div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nutrient,
+.nutrient-value {
+  flex-basis: 50%;
+}
+
+.nutrient-value {
+  color: var(--text-secondary);
+  font-weight: bold;
+}
+
+/* Attribution Styles */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: hsl(228, 45%, 44%);
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+
+@media screen and (max-width: 768px) {
+  .main-container {
+    max-width: 100%; /* Adjusted max-width for smaller screens */
+    margin:0;
+    padding: 1rem;
+  }
+}
+
+
+

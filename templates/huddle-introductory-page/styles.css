@@ -1,0 +1,138 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+/* Define Root Variables */
+:root {
+    --text-primary: hsl(257, 40%, 49%);
+    --text-secondary: hsl(300, 69%, 71%);
+    --font-secondary: 'Open Sans', sans-serif;
+    --font-primary: 'Poppins', sans-serif;
+}
+
+/* Desiging Body */
+body {
+    background: var(--text-primary) url('./images/bg-desktop.svg');
+    padding: 2rem 3rem;
+    font-family: var(--font-primary);
+}
+
+/* Desiging Logo */
+/* .logo{
+    
+} */
+
+/* Desiging main */
+
+.main {
+
+    padding-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    width: 95%;
+
+    & div {
+        color: white;
+
+        & h2 {
+            font-family: var(--font-primary);
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        & button {
+            padding: 1em 4em;
+            background-color: white;
+            color: var(--text-primary);
+            border: none;
+            outline: none;
+            cursor: pointer;
+            border-radius: 2em;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease 0s;
+        }
+
+        & button:hover {
+            background-color: white;
+            box-shadow: 0px 10px 10px var(--text-secondary);
+            color: var(--text-secondary);
+            transform: translateY(-7px);
+            /* font-family: inherit; */
+        }
+    }
+}
+
+/* Desiging Socials */
+
+
+.socials {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin: 2rem auto;
+
+    & i {
+        font-size: 1rem;
+        color: white;
+        background-color: transparent;
+        border: 1px solid grey;
+        border-radius: 50%;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* Responsive Media Queries */
+
+@media (max-width: 600px) {
+    body{
+        background: var(--text-primary) url('./images/bg-mobile.svg');
+    }
+
+    
+    .logo{
+        width: 60%;
+        img{
+            width: 90%;
+        }
+    }
+    .main{
+        flex-direction: column;
+
+        & img{
+            width: 100%;
+        }
+        div{
+            text-align: center;
+            h2{
+                font-size: 1.5rem;
+            }
+            p{ 
+                font-size: 0.8rem; 
+            }
+
+            button{
+                width: 100%;
+            }
+
+        }
+    }
+
+    .socials{
+        margin: 2rem auto;
+        justify-content: center;
+    }
+}
+
+@media (max-width:1113px){
+    .main{
+        flex-direction: column;
+
+        & img{
+            width: 90%;
+        }
+    }
+}

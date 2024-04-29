@@ -1,0 +1,316 @@
+/* Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@700&display=swap');
+
+/* Box Sizing Reset */
+* {
+    box-sizing: border-box;
+}
+
+/* Root Variables */
+:root {
+    /* Primary Colors */
+    --primary-pink: hsl(322, 100%, 66%);
+    --primary-light-pink: hsl(321, 100%, 78%);
+    --primary-light-red: hsl(0, 100%, 63%);
+
+    /* Neutral Colors */
+    --neutral-very-dark-cyan: hsl(192, 100%, 9%);
+    --neutral-very-pale-blue: hsl(207, 100%, 98%);
+    --primary-white: hsl(0, 0%, 100%);
+    --primary-gray: grey;
+
+    --font-primary: 'Open Sans', sans-serif;
+    --font-secondary: 'Poppins', sans-serif;
+}
+
+/* Body Styles */
+body {
+    font-family: var(--font-primary);
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Topbar Styles */
+.topbar {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.topbar img {
+    width: 200px;
+    /* height: 100px;; */
+}
+
+.topbar .btn {
+    font-size: 0.8em;
+    color: var(--primary-pink);
+    background-color: var(--primary-white);
+    border: 2px solid var(--primary-pink);
+    border-radius: 1.5em;
+}
+
+.topbar .btn:hover {
+    color: var(--primary-white);
+    background-color: var(--primary-pink);
+}
+
+/* Designing Community */
+.community {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.community h1 {
+    font-family: var(--font-secondary);
+    font-size: 2rem;
+}
+
+.community p {
+    width: 40%;
+    margin: auto;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+.btn.btn-cta {
+    background-color: var(--primary-pink);
+    font-size: 1rem;
+    padding: 1em 4em;
+    border-radius: 1.5em;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+}
+
+.btn.btn-cta:hover {
+    background-color: var(--primary-white);
+    box-shadow: 0px 10px 10px var(--primary-pink);
+    color: var(--primary-pink);
+    transform: translateY(-7px);
+    font-family: inherit;
+}
+
+.community img {
+    margin-top: 2rem;
+    width: 90%;
+}
+
+/* Designing Stats Section */
+
+.stats-section {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 3rem;
+}
+
+.stats-section .stats i {
+    color: var(--primary-light-pink);
+    font-size: 1rem;
+}
+
+.stats-section .stats h3 {
+    margin: 0px;
+    padding: 0px;
+    font-size: 3rem;
+}
+
+.stats-section .stats p {
+    text-align: center;
+    color: var(--primary-gray);
+    margin-top: 5px;
+}
+
+
+/* Features Section */
+.features-section {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 6rem;
+    gap: 8rem;
+}
+
+.features {
+    display: flex;
+}
+
+.features img {
+    width: 60%;
+}
+
+.features .features-text {
+    margin-right: 1rem;
+    font-weight: 600;
+}
+
+.features .features-text h2 {
+    font-family: var(--font-secondary);
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+/* Button Section */
+.question-section {
+    margin: 10rem 0rem;
+    text-align: center;
+}
+
+.question-section h2 {
+    font-family: var(--font-secondary);
+}
+
+/* Footer Section */
+
+.footer-section {
+
+    line-height: 0;
+}
+
+.footer-section img {
+    width: 100%;
+    margin-bottom: 0px;
+    /* display: block; */
+    margin: 0;
+    padding: 0;
+}
+
+.footer-section .flats {
+    margin-top: 0;
+    background-color: var(--neutral-very-dark-cyan);
+    line-height: initial;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-size: 0.8rem;
+    padding: 5rem 6rem;
+}
+
+.flats .logo {
+    filter: invert(1) brightness(100);
+    width: 20rem;
+}
+
+.flats .icon {
+    width: 1rem;
+}
+
+.flats .left-part p,
+.flats .right-part p {
+    width: 60%;
+}
+
+.flats .right-part input {
+    padding: 0.5em;
+    border: 0;
+    border-radius: 5px;
+    margin-right: 1rem;
+}
+
+.socials {
+    margin-top: 1.5rem;
+}
+
+.socials i {
+    font-size: 2rem;
+    margin-right: 0.5rem;
+}
+
+
+
+/* General Elements */
+.btn {
+    background: var(--primary-pink);
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: .5em 1em;
+}
+
+.btn:hover {
+    background-color: var(--primary-light-pink);
+}
+
+/* Responsive */
+
+
+@media (max-width: 600px) {
+    /* Topbar Responsive */
+    .topbar{
+        padding: 1.5rem 1rem;
+    }
+
+    /* Community Responsive */
+    .community p{
+        width: 90%;
+    }
+
+    /* Stats Section Responsive */
+    .stats-section{
+        flex-direction: column;
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+        row-gap: 1.5rem;
+    }
+
+    /* Features Responsive */
+    .features {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .features .features-text{
+        text-align: center;
+    }
+
+    .features.features-middle img{
+        order: 1;
+    }
+
+    /* Footer section responsive */
+    .footer-section{
+        line-height: 0;
+    }
+    .footer-section .flats{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        padding: 4rem;
+        row-gap: 5rem;
+        
+    }
+
+    .footer-section .flats .right-part p{
+        width: 100%;
+    }
+
+    .footer-section .flats .right-part .btn{
+        text-align: end;
+        margin-left: 10rem;
+    }
+    .footer-section .flats .right-part input{
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    .flats .left-part p{
+        width: 100%;
+    }
+    .flats .logo{
+        width: 13rem;
+    }
+}
