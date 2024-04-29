@@ -1,7 +1,7 @@
 // VehicleTypeCard.tsx
 import React from 'react';
 import Image from 'next/image';
-import { VehicleOption } from '@/app/three-column-preview-card/vehicle-data'; // Assuming the interface is exported
+import { VehicleOption } from './vehicle-data'; // Assuming the interface is exported
 
 interface VehicleTypeCardProps {
     option: VehicleOption;

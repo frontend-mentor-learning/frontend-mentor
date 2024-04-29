@@ -2,8 +2,8 @@
 import React from 'react';
 import { lexend_deca, big_shoulder_display } from '@/app/font';
 import SizeIndicator from '@/utils/size-indicator';
-import vehicleOptions from '@/app/three-column-preview-card/vehicle-data';
-import VehicleTypeCard from '@/app/three-column-preview-card/vehicle-card';
+import vehicleOptions from './vehicle-data';
+import VehicleTypeCard from './vehicle-card';
 
 const VehicleTypeFeatures: React.FC = () => {
     return (
