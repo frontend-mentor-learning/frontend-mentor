@@ -9,8 +9,7 @@ const VehicleTypeFeatures: React.FC = () => {
     return (
         <div className={`${lexend_deca.className} flex flex-col items-center justify-center`}>
             <div>Refactoring...</div>
-            <SizeIndicator />
-            <div className="flex flex-col md:flex-row gap-0 xl:w-7/12 lg:w-8/12 md:w-10/12 overflow-y-auto justify-center items-center md:items-center h-full md:min-h-screen">
+            <div className="flex flex-col items-center justify-center h-full gap-0 overflow-y-auto md:flex-row xl:w-7/12 lg:w-8/12 md:w-10/12 md:items-center md:min-h-screen">
                 {vehicleOptions.map(option => (
                     <VehicleTypeCard key={option.title} option={option} />
                 ))}
