@@ -28,7 +28,7 @@ export default function DynamicImage() {
             objectPosition="center"
             alt="Background"
             className="z-0 md:h-3/6"
-            height={windowWidth && windowWidth > 768 ? 500 : 300}
+            height={windowWidth && windowWidth > 768 ? 520 : 300}
         />
     );
 }

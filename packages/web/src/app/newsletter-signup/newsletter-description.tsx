@@ -17,29 +17,9 @@ const NewsletterDescription = ({
   success, setSuccess, error, setError, email, setEmail
 }: NewsletterDescriptionProps) => {
 
-  useEffect(() => {
-    let timer: NodeJS.Timeout | null = null;
-    if (error) {
-      timer = setTimeout(() => {
-        setError(null); // Reset error after 10 seconds
-      }, 10000);
-    }
-    return () => {
-      if (timer) clearTimeout(timer); // Cleanup the timer when the component unmounts or error changes
-    };
-  }, [error, setError]);
 
-  useEffect(() => {
-    let timer: NodeJS.Timeout | null = null;
-    if (success) {
-      timer = setTimeout(() => {
-        setSuccess(false); // Reset success state after 20 seconds
-      }, 20000);
-    }
-    return () => {
-      if (timer) clearTimeout(timer); // Cleanup the timer when the component unmounts or success changes
-    };
-  }, [success, setSuccess]);
+
+  
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);

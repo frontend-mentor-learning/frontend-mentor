@@ -42,13 +42,12 @@ const NewletterPage = () => {
             <AnimatePresence mode="wait">
                 {success ? (
                     <motion.div key="success" {...scaleIn} className="absolute w-full">
-                        <SuccessCard email={email} setSuccess={setSuccess} setEmail={setEmail} />
+                        <SuccessCard email={email} setSuccess={setSuccess} setEmail={setEmail} success={success} />
                     </motion.div>
                 ) : (
                     <motion.div key="success" {...scaleIn} className="absolute w-full">
-                        <div className="md:bg-charcoal-grey flex items-center justify-center h-screen">
+                        <div className="flex items-center justify-center h-screen md:bg-charcoal-grey">
                             <div className={`${roboto.className} bg-white flex flex-col xl:w-7/12 lg:gap-16 lg:w-9/12 md:px-8 md:pl-16 md:py-6 md:p-4 md:w-11/12 md:rounded-3xl md:flex-row-reverse gap-8 justify-end items-center px-8`}>
-                                <SizeIndicator color='white' />
                                 <DynamicImage />
                                 <NewletterDescription email={email} setEmail={setEmail} error={error} setError={setError} success={success} setSuccess={setSuccess} />
                             </div>
