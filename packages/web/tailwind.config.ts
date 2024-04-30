@@ -12,7 +12,7 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-          'gradient-to-r': 'linear-gradient(to right, #FE5376 0%, #FE5376 10.149253904819489%, #F46E7F 20.298507809638977%, #F46E7F 60.14925390481949%, #FF6E45 100%)',
+          'gradient-to-r': 'linear-gradient(to right, #FF527B, hsl(4, 100%, 67%))',
 
           
           
@@ -33,11 +33,12 @@ const config: Config = {
         'charcoal-grey': 'hsl(235, 18%, 26%)',
         'grey': 'hsl(231, 7%, 60%)',
         'white': 'hsl(0, 0%, 100%)',
+        'slayer': 'hsla(4, 86%, 86%, 0.384)',
       }
     },
 
     boxShadow: {
-      'tomato-lift': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1)',
+      'tomato-lift': '7px 5px 34px -11px hsl(4, 100%, 67%)',
     }
   },
   plugins: [],

@@ -1,7 +1,10 @@
 'use client';
 import { useState, useEffect } from 'react';
 
-const SizeIndicator = () => {
+interface SizeIndicatorProps {
+    color?: string;
+}
+const SizeIndicator = ({ color }: SizeIndicatorProps) => {
     const [size, setSize] = useState('');
     const [category, setCategory] = useState('');
 
@@ -29,8 +32,11 @@ const SizeIndicator = () => {
         return () => window.removeEventListener('resize', updateSize);
     }, []);
 
+
+    color = color || 'gray';
     return (
-        <div className={`absolute top-0 right-0 m-4 p-2 bg-gray-200 rounded-lg text-sm font-medium z-10 `}>
+        
+        <div className={`absolute top-0 right-0 m-4 p-2 bg-gray-200 text-${color} rounded-lg text-sm font-medium z-10 `}>
             {size} - {category}
         </div>
     );

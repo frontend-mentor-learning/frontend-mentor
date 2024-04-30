@@ -1,18 +1,61 @@
+'use client'
+import { motion, AnimatePresence } from "framer-motion";
 import SizeIndicator from "@/utils/size-indicator";
-import Image from "next/image";
-import mobileIllustration from 'public/newsletter-signup/illustration-sign-up-mobile.svg'
 import DynamicImage from "./dynamic-image";
 import NewletterDescription from "./newsletter-description";
 import { roboto } from "../font";
+import { useState } from "react";
+import SuccessCard from "./success-card";
 const NewletterPage = () => {
-    return (
-        <div className="md:bg-charcoal-grey flex items-center justify-center h-screen">
-            <div className={`${roboto.className} bg-white flex flex-col      xl:w-8/12  lg:gap-16 lg:w-9/12    md:px-8 md:py-6 md:p-4 md:w-11/12 md:rounded-lg md:flex-row-reverse  gap-8 justify-end items-center px-8`}>
-                <SizeIndicator />
-                <DynamicImage />
-                <NewletterDescription />
-            </div>
+    const [success, setSuccess] = useState(false)
+    const [email, setEmail] = useState<string>('');
+    const [error, setError] = useState<string | null>(null);
 
+
+    const scaleIn = {
+        initial: {
+            scale: 0.9,
+            opacity: 0
+        },
+        animate: {
+            scale: 1,
+            opacity: 1,
+            transition: {
+                type: 'spring',
+                stiffness: 260,
+                damping: 20
+            }
+        },
+        exit: {
+            scale: 0.95,
+            opacity: 0,
+            transition: {
+                duration: 0.1,
+                ease: 'easeInOut'
+            }
+        }
+    };
+
+
+    return (
+        <div>
+            <AnimatePresence mode="wait">
+                {success ? (
+                    <motion.div key="success" {...scaleIn} className="absolute w-full">
+                        <SuccessCard email={email} setSuccess={setSuccess} setEmail={setEmail} />
+                    </motion.div>
+                ) : (
+                    <motion.div key="success" {...scaleIn} className="absolute w-full">
+                        <div className="md:bg-charcoal-grey flex items-center justify-center h-screen">
+                            <div className={`${roboto.className} bg-white flex flex-col xl:w-7/12 lg:gap-16 lg:w-9/12 md:px-8 md:pl-16 md:py-6 md:p-4 md:w-11/12 md:rounded-3xl md:flex-row-reverse gap-8 justify-end items-center px-8`}>
+                                <SizeIndicator color='white' />
+                                <DynamicImage />
+                                <NewletterDescription email={email} setEmail={setEmail} error={error} setError={setError} success={success} setSuccess={setSuccess} />
+                            </div>
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </div>
     );
 }
