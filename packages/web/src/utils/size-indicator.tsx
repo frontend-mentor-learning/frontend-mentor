@@ -4,7 +4,8 @@ import { useState, useEffect } from 'react';
 interface SizeIndicatorProps {
     color?: string;
 }
-const SizeIndicator = ({ color }: SizeIndicatorProps) => {
+
+const SizeIndicator = ({ color = 'gray' }: SizeIndicatorProps) => { // Default props can be set directly in the destructuring
     const [size, setSize] = useState('');
     const [category, setCategory] = useState('');
 
@@ -32,11 +33,8 @@ const SizeIndicator = ({ color }: SizeIndicatorProps) => {
         return () => window.removeEventListener('resize', updateSize);
     }, []);
 
-
-    color = color || 'gray';
     return (
-        
-        <div className={`absolute top-0 right-0 m-4 p-2 bg-gray-200 text-${color} rounded-lg text-sm font-medium z-10 `}>
+        <div className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 m-4 p-2 bg-gray-200 text-${color} rounded-lg text-sm font-medium z-10`}>
             {size} - {category}
         </div>
     );

@@ -3,7 +3,8 @@ import {
   Work_Sans,
   Lexend_Deca,
   Big_Shoulders_Display,
-  Roboto // newsletter-signup
+  Roboto, // newsletter-signup
+  Nunito_Sans, // countries
 } from 'next/font/google'
 
 export const inter = Inter({
@@ -30,6 +31,12 @@ export const big_shoulder_display = Big_Shoulders_Display({
 })
 export const roboto = Roboto({
   weight: ['700', '400'],
+  subsets: ['latin'],
+  display: 'swap',
+})
+
+export const nunito_sans = Nunito_Sans({
+  weight: ['300','600','800'],
   subsets: ['latin'],
   display: 'swap',
 })
