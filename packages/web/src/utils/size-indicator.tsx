@@ -34,8 +34,8 @@ const SizeIndicator = ({ color = 'gray' }: SizeIndicatorProps) => { // Default p
     }, []);
 
     return (
-        <div className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 m-4 p-2 bg-gray-200 text-${color} rounded-lg text-sm font-medium z-10`}>
-            {size} - {category}
+        <div className={`fixed h-screen left-0 top-0 right-0 bottom-0`}>
+            <span className='w-full mx-auto'>{size} - {category}</span>
         </div>
     );
 };

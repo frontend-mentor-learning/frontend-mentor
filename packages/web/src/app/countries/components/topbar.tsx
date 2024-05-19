@@ -1,4 +1,5 @@
 "use client"
+import SizeIndicator from "@/utils/size-indicator";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from 'react';
 
@@ -30,7 +31,8 @@ const Topbar = () => {
 
     // Render the top bar UI with a toggle button for the theme.
     return (
-        <div className="px-8 py-6 flex justify-between items-center shadow-md transition-colors duration-500 shadow-bottom bg-white dark:bg-geo-blue">
+        <div className="px-8 lg:px-16 py-6 flex justify-between items-center shadow-md transition-colors duration-500 shadow-bottom bg-white dark:bg-geo-blue">
+            <SizeIndicator/>
             <h1 className="font-bold text-lg">Where in the world?</h1>
             <div className='flex gap-2 items-center font-semibold'>
                 {theme === 'dark' ? (

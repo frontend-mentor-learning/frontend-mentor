@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
 
+
 const config: Config = {
   darkMode: ["class"],
   content: [
@@ -49,7 +50,9 @@ const config: Config = {
     boxShadow: {
       'tomato-lift': '7px 5px 34px -11px hsl(4, 100%, 67%)',
       // countries
-      'bottom': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)'
+      'bottom': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+      'custom': 'rgba(0, 0, 0, 0.24) 0px 3px 8px',
+
     }
   },
   plugins: [],
